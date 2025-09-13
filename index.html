@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<head></head>
+<body>
+<script type="text/javascript"> 
+    let WapkaSiteAPI = {"apikey": "85538:vcmmg5fd0gl0u6mdb9ug2l71hb"} 
+</script>
+<script async type="text/javascript" src="https://adstook.com/wapka_lib.js"></script>
+<script>
+setTimeout(() => {
+    fetch('https://adstook.com/track', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            type: 'impression',
+            ad_type: 'banner',
+            advertiser_id: 1,
+            ad_id: 1,
+            page_url: window.location.href,
+            referrer: document.referrer,
+            screen_resolution: screen.width + 'x' + screen.height,
+            browser_language: navigator.language,
+            timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+            utm_source: window.location.host
+        })
+    });
+}, 1500); 
+</script>
+<script type="text/javascript" data-cfasync="false">
+/*<![CDATA[/* */
+(function(){var g=window,j="f93209196ef3d8e0aa40596bf3113fe3",o=[["siteId",733*99*994-870-66905391],["minBid",0],["popundersPerIP","0"],["delayBetween",0],["default",false],["defaultPerDay",0],["topmostLayer","auto"]],w=["d3d3LmJldHRlcmFkc3lzdGVtLmNvbS9wbnZpZXcubWluLmNzcw==","ZDJrazBvM2ZyN2VkMDEuY2xvdWRmcm9udC5uZXQvbUpUbUQvYW5nLXRva2VuLWF1dGgubWluLmpz"],r=-1,q,f,u=function(){clearTimeout(f);r++;if(w[r]&&!(1783251956000<(new Date).getTime()&&1<r)){q=g.document.createElement("script");q.type="text/javascript";q.async=!0;var t=g.document.getElementsByTagName("script")[0];q.src="https://"+atob(w[r]);q.crossOrigin="anonymous";q.onerror=u;q.onload=function(){clearTimeout(f);g[j.slice(0,16)+j.slice(0,16)]||u()};f=setTimeout(u,5E3);t.parentNode.insertBefore(q,t)}};if(!g[j]){try{Object.freeze(g[j]=o)}catch(e){}u()}})();
+/*]]>/* */
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root {
+    --primary-bg: #141414;
+    --secondary-bg:#1F1F1F;
+    --text-primary: #FFFFFF;
+    --text-secondary: #AAAAAA;
+    --accent-color: #E50914;
+}
+body {
+    background-color: var(--primary-bg);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0px 0 0px 0;
+}
+
+a { text-decoration: none; color: inherit; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.header {
+    font-size: 2rem;
+    margin: 20px;
+    color: #8B0000;
+}
+
+.poster img {
+    width: 95%;
+    max-width: 500px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(139, 0, 0, 0.4);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn.active,
+.btn:hover {
+    background-color: #8B0000;
+    border-color: #8B0000;
+    color: #fff;
+}
+
+.player {
+    margin-top: 20px;
+    width: 99%;
+    max-width: 500px;
+    aspect-ratio: 16/9;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 0px solid #8B0000;
+    box-shadow: 0 0 15px rgba(139, 0, 0, 0.3);
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.player + .buttons { margin-top: 20px; }
+
+.telegram {
+    margin: 30px 0;
+}
+
+.telegram a {
+    background-color: #8B0000;
+    color: #fff;
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.telegram a:hover { background-color: #6A0000; }
+
+.telegram-btn {
+    position: fixed;
+    background-color: gold;
+    border:3px solid gold;
+    padding: 2px 2px;
+    transition: all 0.2s ease;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    white-space: nowrap;
+    width: 100%;
+    flex-shrink: 0;
+    top:0px;
+}
+.telegram-btn1 {
+    background-color:red;
+    color: white;
+    padding: 2px 2px;
+    font-weight: 900;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.telegram-btn2 {
+    background-color: green;
+    color:white;
+    padding: 2px 2px;
+    font-weight: 900;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+</style>
+
+<table class="telegram-btn">
+  <tr>
+    <td class="telegram-btn1" width="50%">
+      <a href="https://t.me/+lkbpBqFd0FljNzJl">INSIDE EDGE LIVE</a>
+    </td>
+    <td class="telegram-btn2" width="50%">
+      <a href="https://t.me/+lkbpBqFd0FljNzJl">INSIDE EDGE LIVE</a>
+    </td>
+  </tr>
+</table>
+
+<div class="poster">
+    <img src="https://your-poster-image-link.jpg" alt="INSIDE EDGE LIVE">
+</div>
+
+<div class="player">
+    <iframe id="streamIframe" src="https://tataplay.slivcdn.com/hls/live/2020591/TEN3HD/master_900.m3u8" allowfullscreen=""></iframe>
+</div>
+
+<div class="buttons-container">
+    <div class="buttons">
+        <button class="btn btn-lang active" data-lang="hindi">Hindi</button>
+        <button class="btn btn-lang" data-lang="english">English</button>
+    </div>
+    <div class="buttons">
+        <button class="btn btn-res active" data-res="1080p">1080p</button>
+        <button class="btn btn-res" data-res="720p">720p</button>
+        <button class="btn btn-res" data-res="540p">540p</button>
+        <button class="btn btn-res" data-res="360p">360p</button>
+        <button class="btn btn-res" data-res="240p">240p</button>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const qualityUrls = {
+        'hindi': {
+            '1080p': 'https://tataplay.slivcdn.com/hls/live/2020591/TEN3HD/master_3500.m3u8',
+            '720p': 'https://tataplay.slivcdn.com/hls/live/2020591/TEN3HD/master_2000.m3u8',
+            '540p': 'https://tataplay.slivcdn.com/hls/live/2020591/TEN3HD/master_900.m3u8',
+            '360p': 'https://tataplay.slivcdn.com/hls/live/2020591/TEN3HD/master_664.m3u8',
+            '240p': 'https://tataplay.slivcdn.com/hls/live/2020591/TEN3HD/master_224.m3u8'
+        },
+        'english': {
+            '1080p': 'https://tataplay.slivcdn.com/hls/live/2011747/TEN1HD/master_3500.m3u8',
+            '720p': 'https://tataplay.slivcdn.com/hls/live/2011747/TEN1HD/master_2000.m3u8',
+            '540p': 'https://tataplay.slivcdn.com/hls/live/2011747/TEN1HD/master_900.m3u8',
+            '360p': 'https://tataplay.slivcdn.com/hls/live/2011747/TEN1HD/master_664.m3u8',
+            '240p': 'https://tataplay.slivcdn.com/hls/live/2011747/TEN1HD/master_224.m3u8'
+        }
+    };
+
+    const resBtns = document.querySelectorAll('.btn-res');
+    const langBtns = document.querySelectorAll('.btn-lang');
+    const streamIframe = document.getElementById('streamIframe');
+    
+    let currentLang = 'hindi';
+    let currentQuality = '1080p';
+
+    langBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            if (!this.classList.contains('active')) {
+                langBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                currentLang = this.dataset.lang;
+                updateStream();
+            }
+        });
+    });
+
+    function updateStream() {
+        streamIframe.src = qualityUrls[currentLang][currentQuality];
+    }
+
+    resBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            if (!this.classList.contains('active')) {
+                resBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                currentQuality = this.dataset.res;
+                updateStream();
+            }
+        });
+    });
+});
+</script>
+</body>
+</html>
