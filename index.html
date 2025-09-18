@@ -1,118 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">  
-<title>Multi Quality Players</title>
-<style> 
-:root {
-  --primary-bg: #141414;
-  --secondary-bg:#1F1F1F;
-  --text-primary: #FFFFFF;
-  --text-secondary: #AAAAAA;
-  --accent-color: #E50914;
-}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary-bg: #141414;
+            --secondary-bg: #1F1F1F;
+            --text-primary: #FFFFFF;
+            --text-secondary: #AAAAAA;
+            --accent-color: #E50914;
+        }
 
-body {
-  background-color: #000;
-  color: #fff;
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+        body {
+            background-color: var(--primary-bg);
+            color: var(--text-primary);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
 
-.header {
-  font-size: 2rem;
-  margin: 20px;
-  color: #E50914;
-  text-align: center;
-}
+        a:link, a:visited, a:hover, a:active {
+            color: #fff;
+            text-decoration: none;
+        }
 
-.players {
-  width: 95%;
-  max-width: 800px;
-  margin-bottom: 40px;
-  padding: 10px;
-  background: #111;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(229, 9, 20, 0.4);
-}
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-.players h3 {
-  margin: 10px 0;
-  color: gold;
-  text-align: center;
-  font-size: 1.5rem;
-}
+        .header {
+            font-size: 2rem;
+            margin: 20px;
+            color: #8B0000;
+        }
 
-.player {
-  margin: 15px 0;
-}
+        .poster img {
+            width: 95%;
+            max-width: 500px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 20px rgba(139, 0, 0, 0.4);
+        }
 
-.player p {
-  margin: 5px 0;
-  font-weight: bold;
-  color: #FF4444;
-}
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 10px 0;
+            flex-wrap: wrap;
+        }
 
-.player iframe {
-  width: 100%;
-  aspect-ratio: 16/9;
-  border-radius: 10px;
-  border: none;
-  box-shadow: 0 0 15px rgba(139, 0, 0, 0.3);
-}
-</style>
+        .btn {
+            padding: 8px 15px;
+            font-size: 1rem;
+            border: 1px solid #fff;
+            border-radius: 8px;
+            background-color: #000;
+            color: #fff;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn.active,
+        .btn:hover {
+            background-color: #8B0000;
+            border-color: #8B0000;
+            color: #fff;
+        }
+
+        .player {
+            margin-top: 0px;
+            width: 99%;
+            max-width: 500px;
+            aspect-ratio: 16/9;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 0px solid #8B0000;
+            box-shadow: 0 0 15px rgba(139, 0, 0, 0.3);
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        .telegram-btn {
+            position: fixed;
+            background-color: gold;
+            border: 3px solid gold;
+            padding: 2px;
+            transition: all 0.2s ease;
+            width: 100%;
+            top: 0px;
+            display: flex;
+        }
+
+        .telegram-btn1, .telegram-btn2 {
+            flex: 1;
+            padding: 2px;
+            font-weight: 900;
+            text-align: center;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            white-space: nowrap;
+        }
+
+        .telegram-btn1 {
+            background-color: red;
+            color: white;
+        }
+
+        .telegram-btn2 {
+            background-color: green;
+            color: white;
+        }
+    </style>
 </head>
 <body>
 
-<div class="header">Multi-Quality Streaming Players</div>
+    <!-- Top Buttons -->
+    <table class="telegram-btn">
+        <tr>
+            <td class="telegram-btn1"><a href="https://t.me/tvgotk">TEAMRO LIVE</a></td>
+            <td class="telegram-btn2"><a href="https://t.me/tv4wap">TEAMRO TV</a></td>
+        </tr>
+    </table>
 
-<!-- Hindi -->
-<div class="players">
-  <h3>Hindi</h3>
-  <div class="player"><p>1080p</p><iframe src="http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2020591/TEN3HD/master_3500.m3u8" allowfullscreen></iframe></div>
-  <div class="player"><p>720p</p><iframe src="http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2020591/TEN3HD/master_2000.m3u8" allowfullscreen></iframe></div>
-  <div class="player"><p>540p</p><iframe src="http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2020591/TEN3HD/master_1300.m3u8" allowfullscreen></iframe></div>
-  <div class="player"><p>480p</p><iframe src="http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2020591/TEN3HD/master_900.m3u8" allowfullscreen></iframe></div>
-  <div class="player"><p>360p</p><iframe src="http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2020591/TEN3HD/master_664.m3u8" allowfullscreen></iframe></div>
-  <div class="player"><p>240p</p><iframe src="http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2020591/TEN3HD/master_224.m3u8" allowfullscreen></iframe></div>
-</div>
+    <div class="poster">
+        <img src="" alt="">
+    </div>
 
-<!-- English -->
-<div class="players">
-  <h3>English</h3>
-  <div class="player"><p>1080p</p><iframe src="http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2011747/TEN1HD/master_3500.m3u8" allowfullscreen></iframe></div>
-  <div class="player"><p>720p</p><iframe src="http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2011747/TEN1HD/master_2000.m3u8" allowfullscreen></iframe></div>
-  <div class="player"><p>540p</p><iframe src="http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2011747/TEN1HD/master_1300.m3u8" allowfullscreen></iframe></div>
-  <div class="player"><p>480p</p><iframe src="http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2011747/TEN1HD/master_900.m3u8" allowfullscreen></iframe></div>
-  <div class="player"><p>360p</p><iframe src="http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2011747/TEN1HD/master_664.m3u8" allowfullscreen></iframe></div>
-  <div class="player"><p>240p</p><iframe src="http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2011747/TEN1HD/master_224.m3u8" allowfullscreen></iframe></div>
-</div>
+    <div class="player">
+        <iframe id="streamIframe" src="http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2020591/TEN3HD/master_900.m3u8" allowfullscreen></iframe>
+    </div>
 
-<!-- Telugu -->
-<div class="players">
-  <h3>Telugu</h3>
-  <div class="player"><p>1080p</p><iframe src="http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2020589/ten4hd/master_3500.m3u8" allowfullscreen></iframe></div>
-  <div class="player"><p>720p</p><iframe src="http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2020589/ten4hd/master_2000.m3u8" allowfullscreen></iframe></div>
-  <div class="player"><p>540p</p><iframe src="http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2020589/ten4hd/master_1300.m3u8" allowfullscreen></iframe></div>
-  <div class="player"><p>480p</p><iframe src="http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2020589/ten4hd/master_900.m3u8" allowfullscreen></iframe></div>
-  <div class="player"><p>360p</p><iframe src="http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2020589/ten4hd/master_664.m3u8" allowfullscreen></iframe></div>
-  <div class="player"><p>240p</p><iframe src="http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2020589/ten4hd/master_224.m3u8" allowfullscreen></iframe></div>
-</div>
+    <div class="buttons-container">
+        <div class="buttons">
+            <button class="btn btn-lang active" data-lang="hindi">Hindi</button>
+            <button class="btn btn-lang" data-lang="english">English</button>
+            <button class="btn btn-lang" data-lang="telugu">Telugu</button>
+            <button class="btn btn-lang" data-lang="tamil">Tamil</button>
+        </div>
+        <div class="buttons">
+            <button class="btn btn-res active" data-res="1080p">1080p</button>
+            <button class="btn btn-res" data-res="720p">720p</button>
+            <button class="btn btn-res" data-res="540p">540p</button>
+            <button class="btn btn-res" data-res="480p">480p</button>
+            <button class="btn btn-res" data-res="360p">360p</button>
+            <button class="btn btn-res" data-res="240p">240p</button>
+        </div>
+    </div>
 
-<!-- Tamil -->
-<div class="players">
-  <h3>Tamil</h3>
-  <div class="player"><p>1080p</p><iframe src="http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2020437/ten4sd/master_3500.m3u8" allowfullscreen></iframe></div>
-  <div class="player"><p>720p</p><iframe src="http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2020437/ten4sd/master_2000.m3u8" allowfullscreen></iframe></div>
-  <div class="player"><p>540p</p><iframe src="http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2020437/ten4sd/master_1300.m3u8" allowfullscreen></iframe></div>
-  <div class="player"><p>480p</p><iframe src="http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2020437/ten4sd/master_900.m3u8" allowfullscreen></iframe></div>
-  <div class="player"><p>360p</p><iframe src="http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2020437/ten4sd/master_664.m3u8" allowfullscreen></iframe></div>
-  <div class="player"><p>240p</p><iframe src="http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2020437/ten4sd/master_224.m3u8" allowfullscreen></iframe></div>
-</div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const qualityUrls = {
+                'hindi': {
+                    '1080p': 'http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2020591/TEN3HD/master_3500.m3u8',
+                    '720p': 'http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2020591/TEN3HD/master_2000.m3u8',
+                    '540p': 'http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2020591/TEN3HD/master_1300.m3u8',
+                    '480p': 'http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2020591/TEN3HD/master_900.m3u8',
+                    '360p': 'http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2020591/TEN3HD/master_664.m3u8',
+                    '240p': 'http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2020591/TEN3HD/master_224.m3u8'
+                },
+                'english': {
+                    '1080p': 'http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2011747/TEN1HD/master_3500.m3u8',
+                    '720p': 'http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2011747/TEN1HD/master_2000.m3u8',
+                    '540p': 'http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2011747/TEN1HD/master_1300.m3u8',
+                    '480p': 'http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2011747/TEN1HD/master_900.m3u8',
+                    '360p': 'http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2011747/TEN1HD/master_664.m3u8',
+                    '240p': 'http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2011747/TEN1HD/master_224.m3u8'
+                },
+                'telugu': {
+                    '1080p': 'http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2020589/ten4hd/master_3500.m3u8',
+                    '720p': 'http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2020589/ten4hd/master_2000.m3u8',
+                    '540p': 'http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2020589/ten4hd/master_1300.m3u8',
+                    '480p': 'http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2020589/ten4hd/master_900.m3u8',
+                    '360p': 'http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2020589/ten4hd/master_664.m3u8',
+                    '240p': 'http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2020589/ten4hd/master_224.m3u8'
+                },
+                'tamil': {
+                    '1080p': 'http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2020437/ten4sd/master_3500.m3u8',
+                    '720p': 'http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2020437/ten4sd/master_2000.m3u8',
+                    '540p': 'http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2020437/ten4sd/master_1300.m3u8',
+                    '480p': 'http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2020437/ten4sd/master_900.m3u8',
+                    '360p': 'http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2020437/ten4sd/master_664.m3u8',
+                    '240p': 'http://Teamro0045.free.nf/Teamroclapperplyr.html?url=https://dish.slivcdn.com/hls/live/2020437/ten4sd/master_224.m3u8'
+                }
+            };
+
+            const resBtns = document.querySelectorAll('.btn-res');
+            const langBtns = document.querySelectorAll('.btn-lang');
+            const streamIframe = document.getElementById('streamIframe');
+
+            let currentLang = 'hindi';
+            let currentQuality = '1080p';
+
+            langBtns.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    if (!this.classList.contains('active')) {
+                        langBtns.forEach(b => b.classList.remove('active'));
+                        this.classList.add('active');
+                        currentLang = this.dataset.lang;
+                        updateStream();
+                    }
+                });
+            });
+
+            resBtns.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    if (!this.classList.contains('active')) {
+                        resBtns.forEach(b => b.classList.remove('active'));
+                        this.classList.add('active');
+                        currentQuality = this.dataset.res;
+                        updateStream();
+                    }
+                });
+            });
+
+            function updateStream() {
+                streamIframe.src = qualityUrls[currentLang][currentQuality];
+            }
+        });
+    </script>
 
 </body>
 </html>
